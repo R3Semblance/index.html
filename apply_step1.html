@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Bright Future Scholarship Application</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  body { background:#eef1f8; color:#1a1a1a; min-height:100vh; }
+
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    Bright Future Foundation
+  </div>
+</div>
+<div class="urgency-strip">
+  ⚠ Your pre-selected award expires in 11:11:11 complete all steps to secure funding
+</div>
+
+<div class="wrap">
+  <div class="progress">
+    <div class="active">
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+  <div class="card">
+    <h1>Step 1 of 4 Applicant Information</h1>
+    <p class="sub">Let's start with the basics. This only takes a few minutes.</p>
+
+    <form id="f1" autocomplete="off">
+      <label for="fname">
+        Full legal name
+      </label>
+      <input type="text" id="fname" placeholder="Prince Dane Janay" required>
+
+      <label for="email">
+        Email address
+      </label>
+      <input type="email" id="email" placeholder="you@email.com" required>
+
+      <label for="phone">
+        Mobile number
+      </label>
+      <input type="tel" id="phone" placeholder="+63 9XX XXX XXXX" required>
+
+      <label for="school">
+        Current school / university
+      </label>
+      <input type="text" id="school" placeholder="e.g. University of the Philippines" required>
+
+      <label for="level">
+        Year level
+      </label>
+      <select id="level" required>
+        <option value="">Select year level</option>
+        <option>High School</option>
+        <option>College Freshman</option>
+        <option>College Sophomore</option>
+        <option>College Junior</option>
+        <option>College Senior</option>
+      </select>
+
+      <button type="submit" class="next-btn">Continue →</button>
+    </form>
+
+    
+  </div>
+
+  <div class="counter-note">
+    Join 80,005 students who already applied this week
+  </div>
+</div>
+
+<script>
+  document.getElementById('f1').addEventListener('submit', function(e){
+    e.preventDefault();
+    window.location.href = 'apply_step2.html';
+  });
+</script>
+
+</body>
+</html>
